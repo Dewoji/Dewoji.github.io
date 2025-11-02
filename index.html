@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
-<style>
-    body {background-color: #7F7F98;}
-</style>
-<head>
-    <meta charset="UTF-8">
-    <title>QrCode converter</title>
-</head>
-<center>
-    <h1>
-        QrCode Maker
-    </h1>
-</center>
-<body>
-<center>
-    <form>
-        <label>Inserisci URL</label>
-        <input type="text" id="url" name="url"><br>
-        <input type="submit" value="Submit">
-    </form>
-</center>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>QrCode generator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center>
+            <h1>
+                QrCode Generator
+            </h1>
+            <div>
+                <label>Inserisci URL</label>
+                <input type="text" id="url" name="url"><br>
+                <button id="submitButton"> Submit </button>
+            </div>
+        </center>
+        <div id="imagePopUp" class="popup">
+            <img id="popUpImage" src="" class="popup-image">
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
