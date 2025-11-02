@@ -33,7 +33,7 @@ submitButton.onclick = async function() {
         } else {
             alert('Invalid URL!');
         }
-    } catch {
+    } catch (error) {
         alert('URL fetch error!');
     }
 }
