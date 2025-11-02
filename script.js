@@ -23,17 +23,12 @@ window.onclick = function(event) {
     }
 }
 
-submitButton.onclick = async function() {
+submitButton.onclick = function() {
     const url = document.getElementById('url').value;
-//    alert(url);
-    try {
-        const response = await fetch(url);
-        if(response.ok){
-            submitButtonClick();
-        } else {
+    const regex = /^(http:\/\/|https:\/\/)[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+([\/?].*)?$/;
+        if(!regex.test(url)) {
             alert('Invalid URL!');
-        }
-    } catch (error) {
-        alert('URL fetch error!');
-    }
+            return;
+            }
+            submitButtonClick();
 }
