@@ -25,14 +25,15 @@ window.onclick = function(event) {
 
 submitButton.onclick = async function() {
     const url = document.getElementById('url').value;
-    try {
-        const response = await fetch(url, {method: 'HEAD'});
-        if(response.ok){
-            submitButtonClick();
-        } else {
-            alert('Invalid URL!');
-        }
-    } catch {
-        alert('URL fetch error!');
-    }
+    alert(url);
+//    try {
+//        const response = await fetch(url, {method: 'HEAD'});
+//        if(response.ok){
+//            submitButtonClick();
+//        } else {
+//            alert('Invalid URL!');
+//        }
+//    } catch {
+//        alert('URL fetch error!');
+//    }
 }
