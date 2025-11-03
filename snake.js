@@ -10,15 +10,15 @@ let interval;
 let isGameOver = false;
 let isRunning = false;
 
-//function resizeCanvas() {
-//    const column = Math.floor(window.innerWidth / gridSize);
-//    const roww = Math.floor(window.innerHeight / gridSize);
-//    canvas.width = column * gridSize;
-//    canvas.height = row * gridSize;
-//}
-//
-//resizeCanvas();
-//window.addEventListener('resize', resizeCanvas);
+function resizeCanvas() {
+    const column = Math.floor(window.innerWidth / gridSize);
+    const row = Math.floor(window.innerHeight / gridSize);
+    canvas.width = column * gridSize;
+    canvas.height = row * gridSize;
+}
+
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
 function startGame() {
     isRunning = true;
