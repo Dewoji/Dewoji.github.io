@@ -75,6 +75,7 @@ function gameLoop() {
 }
 
 function drawGame() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
     snake.forEach((segment, index) => {
         context.font = 'bold 18px Arial';
         context.textAlign = 'center';
@@ -98,6 +99,12 @@ function drawGame() {
         context.fillText('i', food.x, food.y + gridSize);
 }
 
-window.addEventListener('keydown', () => {if(!isRunning) {startGame()} else changeDirection)};
+window.addEventListener('keydown', (event) => {
+    if (!isRunning) {
+        startGame();
+    } else {
+        changeDirection(event);
+    }
+});
 
 drawGame();
