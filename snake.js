@@ -2,7 +2,7 @@ const canvas = document.getElementById('game');
 
 const context = canvas.getContext('2d');
 const gridSize = 20;
-let snake = ({x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}, {x:390, y:250});
+let snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}, {x:390, y:250}];
 let food = {x:410, y:250};
 let direction = {x:-gridSize, y:0};
 
@@ -14,7 +14,7 @@ function startGame() {
     isRunning = true;
     isGameOver = false;
 
-    snake = ({x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}, {x:390, y:250}, {x:410, y:250});
+    snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}, {x:390, y:250}, {x:410, y:250}];
     food = {x:410, y:250};
     direction = {x:-gridSize, y:0};
 
@@ -30,7 +30,7 @@ function endGame() {
     drawGame();
 }
 
-function changeDirection() {
+function changeDirection(event) {
     if(isGameOver) return;
 
     if (event.key === 'ArrowUp' && direction.y === 0) {
@@ -54,7 +54,7 @@ function eatFood() {
     const head = snake[0];
     if (head.x === food.x && head.y === food.y) {
         snake.push({});
-        food = {x: Math.floor(Math.random * (canvas.size/gridSize)) * gridSize, y: Math.floor(Math.random() * (canvas.size/gridSize)) * gridSize};
+        food = {x: Math.floor(Math.random() * (canvas.width/gridSize)) * gridSize, y: Math.floor(Math.random() * (canvas.height/gridSize)) * gridSize};
     }
 }
 
@@ -64,7 +64,7 @@ function gameLoop() {
         return;
     }
 
-    const head = {x: snake.x + direction.x, y: snake.y + direction.y};
+    const head = {x: snake[0].x + direction.x, y: snake[0].y + direction.y};
     snake.unshift(head);
 
     eatFood();
@@ -75,8 +75,10 @@ function gameLoop() {
 }
 
 function drawGame() {
-    snake.forEach((segment, indedx) => {
-        context.font = 'bold 18px arial';
+    snake.forEach((segment, index) => {
+        context.font = 'bold 18px Arial';
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
         context.fillStyle = 'white';
         if (index === 0) {
                 context.fillText('D', segment.x, segment.y + gridSize);
@@ -96,6 +98,6 @@ function drawGame() {
         context.fillText('i', food.x, food.y + gridSize);
 }
 
-window.addEventListener('keydown' () => if(!isRunning) {startGame()} else changeDirection);
+window.addEventListener('keydown', () => {if(!isRunning) {startGame()} else changeDirection)};
 
 drawGame();
