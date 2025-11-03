@@ -5,62 +5,22 @@
     <title>QrCode generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<div>
+    <center>
+        <h1>
+            QrCode Generator
+        </h1>
+        <div>
+            <label>Inserisci URL</label>
+            <input type="text" id="url" name="url"><br>
+            <button id="submitButton"> Submit </button>
+        </div>
+    </center>
+</div>
 <body>
-<center>
-    <h1>
-        QrCode Generator
-    </h1>
-    <div>
-        <label>Inserisci URL</label>
-        <input type="text" id="url" name="url"><br>
-        <button id="submitButton"> Submit </button>
-    </div>
-</center>
 <div id="imagePopUp" class="popup">
     <img id="popUpImage" src="" class="popup-image">
 </div>
-
-<script>
-const submitButton = document.getElementById('submitButton');
-
-const popUp = document.getElementById('imagePopUp');
-const popUpImage = document.getElementById('popUpImage');
-
-const images = [
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.x-ibkw-Kpzz3LV8WfR0W7QHaEo%3Fpid%3DApi&f=1&ipt=408b65b730daade54e82ccbbe73e8e030deb3e00585a3bb6a41cb4bdd686bf75&ipo=images', // Prima immagine
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.G37tgeQqSNt7v2oPfj9ltQHaE7%3Fpid%3DApi&f=1&ipt=9ba936b65b380e953db02951591907a669829878ed3dfb61a787ccf214e78b1f&ipo=images', // Seconda immagine
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.9pb56LncQNlJHhHrqBZjPwHaE8%3Fpid%3DApi&f=1&ipt=064c39df0bd9000b4fb5aa3f47272ca0556a69bd95fb38f364d02db655c65711&ipo=images'  // Terza immagine
-];
-
-
-function getRandomImage() {
-    const randomNum = Math.floor(Math.random() * images.length);
-    return images[randomNum];
-}
-
-function submitButtonClick() {
-    const image = getRandomImage();
-    popUpImage.src = image;
-    popUp.style.display = 'flex';
-}
-
-window.onclick = function(event) {
-    if(event.target === popUp) {
-        popUp.style.display = 'none';
-    }
-}
-
-submitButton.onclick = function() {
-    const url = document.getElementById('url').value;
-    const regex = /^(http:\/\/|https:\/\/)[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+([\/?].*)?$/;
-        if(!regex.test(url)) {
-            alert('Invalid URL!');
-            return;
-            }
-            submitButtonClick();
-}
-
-        </script>
+<script src="script.js"></script>
 </body>
-
 </html>
