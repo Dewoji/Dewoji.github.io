@@ -6,6 +6,10 @@ body {
     flex-direction: column;
 }
 
+.testo {
+    margin-top: 20px;
+}
+
 .popup {
     display: none;
     position: fixed;
@@ -18,7 +22,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    display: flex;
 }
 
 .popup-image {
