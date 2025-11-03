@@ -14,12 +14,12 @@ function getRandomImage() {
 function submitButtonClick() {
     const image = getRandomImage();
     popUpImage.src = image;
-    popUp.style.display = 'flex';
+    popup.classList.add('show');
 }
 
 window.onclick = function(event) {
     if(event.target === popUp) {
-        popUp.style.display = 'none';
+        popup.classList.add('show');
     }
 }
 
