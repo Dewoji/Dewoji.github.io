@@ -2,13 +2,23 @@ const canvas = document.getElementById('game');
 
 const context = canvas.getContext('2d');
 const gridSize = 20;
-let snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}, {x:390, y:250}];
-let food = {x:410, y:250};
+let snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}];
+let food = {x:390, y:250};
 let direction = {x:-gridSize, y:0};
 
 let interval;
 let isGameOver = false;
 let isRunning = false;
+
+function resizeCanvas() {
+    const column = Math.floor(window.innerWidth / gridSize);
+    const roww = Math.floor(window.innerHeight / gridSize);
+    canvas.width = column * gridSize;
+    canvas.height = row * gridSize;
+}
+
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
 function startGame() {
     isRunning = true;
