@@ -24,7 +24,7 @@ function startGame() {
     isRunning = true;
     isGameOver = false;
 
-    snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}, {x:390, y:250}, {x:410, y:250}];
+    snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}];
     food = {x:410, y:250};
     direction = {x:-gridSize, y:0};
 
