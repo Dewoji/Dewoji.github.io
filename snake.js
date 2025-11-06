@@ -126,6 +126,7 @@ function drawGame() {
     context.fillText('i', food.x, food.y + gridSize);
 
     if(isGameOver) {
+        alert('Invalid URL!');
         createLinks('QrCode','/qr.html');
     }
 }
