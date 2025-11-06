@@ -87,6 +87,15 @@ function gameLoop() {
     drawGame();
 }
 
+function createLinks(text, url) {
+    const link = document.createElement('a');
+    link.setContent = text;
+    link.href = url;
+    link.style.cursor = 'pointer';
+    link.style.color = #bb6ff6;
+    document.getElementById('link').appendChild(link);
+}
+
 function drawGame() {
     context.clearRect(0, 0, canvas.width, canvas.height);
     snake.forEach((segment, index) => {
@@ -114,15 +123,6 @@ function drawGame() {
     if(isGameOver) {
         createLinks('QrCode','/qr.html');
     }
-}
-
-function createLinks(text, url) {
-    const link = document.createElement('a');
-    link.setContent = text;
-    link.href = url;
-    link.style.cursor = 'pointer';
-    link.style.color = #bb6ff6;
-    document.getElementById('link').appendChild(link);
 }
 
 window.addEventListener('keydown', (event) => {
