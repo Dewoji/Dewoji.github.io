@@ -126,7 +126,7 @@ function drawGame() {
     context.fillText('i', food.x, food.y + gridSize);
 
     if(isGameOver) {
-        alert('Schiantato!');
+//        alert('Schiantato!');
         createLinks('QrCode','/qr.html');
     }
 }
