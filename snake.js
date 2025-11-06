@@ -112,7 +112,7 @@ function drawGame() {
     context.fillText('i', food.x, food.y + gridSize);
 
     if(isGameOver) {
-        createLinks('QrCode','/qr.html');
+//        createLinks('QrCode','/qr.html');
          ctx.fillStyle = 'white';
                 ctx.font = '30px Arial';
                 ctx.fillText('Game Over', canvas.width / 2 - 85, canvas.height / 2);
@@ -122,14 +122,14 @@ function drawGame() {
     }
 }
 
-function createLinks(text, url) {
-    const link = document.createElement('a');
-    link.setContent = text;
-    link.href = url;
-    link.style.cursor = 'pointer';
-    link.style.color = #bb6ff6;
-    document.getElementById('link').appendChild(link);
-}
+//function createLinks(text, url) {
+//    const link = document.createElement('a');
+//    link.setContent = text;
+//    link.href = url;
+//    link.style.cursor = 'pointer';
+//    link.style.color = #bb6ff6;
+//    document.getElementById('link').appendChild(link);
+//}
 
 window.addEventListener('keydown', (event) => {
     if (!isRunning) {
