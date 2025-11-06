@@ -64,7 +64,7 @@ function eatFood() {
     const head = snake[0];
     if (head.x === food.x && head.y === food.y) {
         snake.push({});
-        food = {x: Math.floor(Math.random() * (canvas.width/gridSize)) * gridSize, y: Math.floor(Math.random() * (canvas.height/gridSize)) * gridSize};
+        food = {x: Math.floor(Math.random() * (canvas.width/gridSize)) * gridSize + gridSize/2, y: Math.floor(Math.random() * (canvas.height/gridSize)) * gridSize + gridSize/2};
     }
 }
 
@@ -87,7 +87,7 @@ function gameLoop() {
 function drawGame() {
     context.clearRect(0, 0, canvas.width, canvas.height);
     snake.forEach((segment, index) => {
-        context.font = 'bold 18px Arial';
+        context.font = 'bold ' + gridSize +'px Lucida Console';
         context.textAlign = 'center';
         context.textBaseline = 'middle';
         context.fillStyle = 'white';
