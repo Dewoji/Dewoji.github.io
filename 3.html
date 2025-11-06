@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Ho finito le idee strambe</title>
+    <style>
+        body {
+            background-color: #7F7F98;
+        }
+        #cat1 {
+            display: none;
+            max-width: 100px;
+        }
+        #cat2 {
+            display: none;
+            max-width: 100px;
+        }
+    </style>
 </head>
 <body>
     <img src="images/DewoPet.gif">
-
+    <br>
     Non essendomi mai cimentata nel fare siti web e nel usare JS ho voluto provare a fare qualcosa di diverso.
-    L'idea per il qr mi è venuta quando è stato fatto un commento  a lezione, e diciamo che l'idea iniziale non era quella di mettere un Rickroll, ma non mi sembrava appropriato.
-    Creare 3QR che portano sempre allo stesso link mi sembrava divertente quindi ho fatto un semplice random per i 3 elementi.
-
-    <button onclick="showImage('cat1')">Gattino 1</button>
-    <img id="cat1" src="https://tenor.com/view/screaming-cat-browthy-gif-27553989">
-
-    Credo di aver odiato ogni istante di CSS, non mi è piaciuto molto, per questo il sito non risulta bello o moderno.
+    L'idea per il qr mi è venuta quando è stato fatto un commento a lezione, e diciamo che l'idea iniziale non era quella di mettere un Rickroll, ma non mi sembrava appropriato.
+    Ho aperto 3 generatori di QR diversi online, generato i 3qr. Poi ho fatto una funzione che sceglia a caso una delle 3 immagini e la restituisce come lo pseudoQR.
+    <br>
+    <button onclick="showImage('cat1')">Gif 1</button>
+    <img id="cat1" src="https://media1.tenor.com/m/qhI_SO98l6MAAAAd/screaming-cat-browthy.gif">
+    <br>
+    Credo di aver odiato ogni istante di CSS, non mi piace molto. Per questo il sito non risulta bello o moderno.
     Invece ricreare The Snake in ogni linguaggio di programmazione mi è sempre piaciuto, con poi l'aggiunta che se il serpente si schianta si possono aprire gli altri siti.
-
-    <button onclick="showImage('cat2')">Gattino 2</button>
-    <img id="cat2" src="https://tenor.com/view/catjam-gif-11680054643949953820">
+    <br>
+    <button onclick="showImage('cat2')">Gif 2</button>
+    <img id="cat2" src="https://media.tenor.com/ohfj0KnJ4xwAAAAi/catjam.gif">
 </body>
 <script>
     function showImage(imageName) {
