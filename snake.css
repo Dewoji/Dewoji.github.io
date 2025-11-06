@@ -15,8 +15,11 @@ canvas {
 }
 
 #link {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    position: relative;
     z-index: 10;
 }
