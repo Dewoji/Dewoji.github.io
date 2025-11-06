@@ -4,7 +4,8 @@ const context = canvas.getContext('2d');
 const gridSize = 20;
 let snakePosX = 0;
 let snakePosY = 0;
-let snake = [{x:snakePosX, y:snakePosY}, {x:snakePosX+gridSize, y:snakePosY}, {x:snakePosX + (gridSize)*2, y:snakePosY}, {x:snakePosX + (gridSize)*3, y:snakePosY}, {x:snakePosX + (gridSize)*4, y:snakePosY}];
+//let snake = [{x:snakePosX, y:snakePosY}, {x:snakePosX+gridSize, y:snakePosY}, {x:snakePosX + (gridSize)*2, y:snakePosY}, {x:snakePosX + (gridSize)*3, y:snakePosY}, {x:snakePosX + (gridSize)*4, y:snakePosY}];
+let snake = [{x:290, y:250}, {x:310, y:250}, {x:330, y:250}, {x:350, y:250}, {x:370, y:250}];
 let food = {x:390, y:250};
 let direction = {x:-gridSize, y:0};
 
@@ -110,19 +111,19 @@ function drawGame() {
 
     context.fillText('i', food.x, food.y + gridSize);
 
-    if(isGameOver) {
-        createLinks('QrCode','/qr.html');
-    }
+//    if(isGameOver) {
+//        createLinks('QrCode','/qr.html');
+//    }
 }
 
-function createLinks(text, url) {
-    const link = document.createElement('a');
-    link.setContent = text;
-    link.href = url;
-    link.style.cursor = 'pointer';
-    link.style.color = #bb6ff6;
-    document.getElementById('link').appendChild(link);
-}
+//function createLinks(text, url) {
+//    const link = document.createElement('a');
+//    link.setContent = text;
+//    link.href = url;
+//    link.style.cursor = 'pointer';
+//    link.style.color = #bb6ff6;
+//    document.getElementById('link').appendChild(link);
+//}
 
 window.addEventListener('keydown', (event) => {
     if (!isRunning) {
