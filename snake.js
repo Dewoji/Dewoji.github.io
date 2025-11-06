@@ -112,24 +112,18 @@ function drawGame() {
     context.fillText('i', food.x, food.y + gridSize);
 
     if(isGameOver) {
-//        createLinks('QrCode','/qr.html');
-         context.fillStyle = 'white';
-                context.font = '30px Arial';
-                context.fillText('Game Over', canvas.width / 2 - 85, canvas.height / 2);
-                context.font = '20px Arial';
-                context.fillText('Score: ' + score, canvas.width / 2 - 40, canvas.height / 2 + 30); // Show the score
-                context.fillText('Click to Restart', canvas.width / 2 - 75, canvas.height / 2 + 60);
+        createLinks('QrCode','/qr.html');
     }
 }
 
-//function createLinks(text, url) {
-//    const link = document.createElement('a');
-//    link.setContent = text;
-//    link.href = url;
-//    link.style.cursor = 'pointer';
-//    link.style.color = #bb6ff6;
-//    document.getElementById('link').appendChild(link);
-//}
+function createLinks(text, url) {
+    const link = document.createElement('a');
+    link.setContent = text;
+    link.href = url;
+    link.style.cursor = 'pointer';
+    link.style.color = #bb6ff6;
+    document.getElementById('link').appendChild(link);
+}
 
 window.addEventListener('keydown', (event) => {
     if (!isRunning) {
