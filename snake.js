@@ -111,7 +111,7 @@ function drawGame() {
 
     context.fillText('i', food.x, food.y + gridSize);
 
-    if(isGameOver & !isRunning) {
+    if(isGameOver) {
 //        createLinks('QrCode','/qr.html');
          context.fillStyle = 'white';
                 context.font = '30px Arial';
