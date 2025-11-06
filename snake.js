@@ -127,7 +127,8 @@ function drawGame() {
 
     if(isGameOver) {
 //        alert('Schiantato!');
-        createLinks('QrCode','/qr.html');
+        createLinks('QrCode Generator','/qr.html');
+        createLinks('3','/3.html');
     }
 }
 
