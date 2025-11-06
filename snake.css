@@ -15,4 +15,5 @@ canvas {
 
 link {
     text-align: center;
+    z-index: 10;
 }
