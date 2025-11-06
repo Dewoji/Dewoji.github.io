@@ -31,6 +31,11 @@ function startGame() {
     food = {x:410, y:250};
     direction = {x:-gridSize, y:0};
 
+    const linkContainer = document.getElementById('link');
+    if(linkContainer) {
+        linkContainer.innerHTML = '';
+    }
+
     clearInterval(interval);
     interval = setInterval(gameLoop, 100);
     drawGame();
