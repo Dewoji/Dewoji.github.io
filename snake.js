@@ -92,7 +92,7 @@ function createLinks(text, url) {
     link.setContent = text;
     link.href = url;
     link.style.cursor = 'pointer';
-    link.style.color = #bb6ff6;
+    link.style.color = '#bb6ff6';
     document.getElementById('link').appendChild(link);
 }
 
