@@ -111,19 +111,19 @@ function drawGame() {
 
     context.fillText('i', food.x, food.y + gridSize);
 
-//    if(isGameOver) {
-//        createLinks('QrCode','/qr.html');
-//    }
+    if(isGameOver) {
+        createLinks('QrCode','/qr.html');
+    }
 }
 
-//function createLinks(text, url) {
-//    const link = document.createElement('a');
-//    link.setContent = text;
-//    link.href = url;
-//    link.style.cursor = 'pointer';
-//    link.style.color = #bb6ff6;
-//    document.getElementById('link').appendChild(link);
-//}
+function createLinks(text, url) {
+    const link = document.createElement('a');
+    link.setContent = text;
+    link.href = url;
+    link.style.cursor = 'pointer';
+    link.style.color = #bb6ff6;
+    document.getElementById('link').appendChild(link);
+}
 
 window.addEventListener('keydown', (event) => {
     if (!isRunning) {
