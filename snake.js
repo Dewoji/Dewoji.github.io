@@ -113,6 +113,12 @@ function drawGame() {
 
     if(isGameOver) {
         createLinks('QrCode','/qr.html');
+         ctx.fillStyle = 'white';
+                ctx.font = '30px Arial';
+                ctx.fillText('Game Over', canvas.width / 2 - 85, canvas.height / 2);
+                ctx.font = '20px Arial';
+                ctx.fillText('Score: ' + score, canvas.width / 2 - 40, canvas.height / 2 + 30); // Show the score
+                ctx.fillText('Click to Restart', canvas.width / 2 - 75, canvas.height / 2 + 60);
     }
 }
 
