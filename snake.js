@@ -99,7 +99,6 @@ function createLinks(text, url) {
     link.style.cursor = 'pointer';
     link.style.color = '#bb6ff6';
     document.getElementById('link').appendChild(link);
-    document.getElementById('link').appendChild(document.createElement('br'));
 }
 
 function drawGame() {
