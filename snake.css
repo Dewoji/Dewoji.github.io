@@ -13,7 +13,9 @@ canvas {
     left: 0;
 }
 
-link {
-    text-align: center;
+#link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
 }
