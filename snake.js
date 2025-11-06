@@ -89,7 +89,7 @@ function gameLoop() {
 
 function createLinks(text, url) {
     const link = document.createElement('a');
-    link.setContent = text;
+    link.textContent = text;
     link.href = url;
     link.style.cursor = 'pointer';
     link.style.color = '#bb6ff6';
